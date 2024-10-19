@@ -40,7 +40,7 @@ class _InformationPageState extends State<InformationPage> {
                         TextSpan(
                           text: 'Provide \n',
                           style: GoogleFonts.inter(
-                            fontSize: 36.0,
+                            fontSize: 32.0,
                             fontWeight: FontWeight.w800,
                             color: Theme.of(context).colorScheme.inversePrimary,
                           ),
@@ -48,7 +48,7 @@ class _InformationPageState extends State<InformationPage> {
                         TextSpan(
                           text: 'Your Details \n',
                           style: GoogleFonts.inter(
-                            fontSize: 36.0,
+                            fontSize: 32.0,
                             fontWeight: FontWeight.w800,
                             color: Theme.of(context).colorScheme.inversePrimary,
                           ),
@@ -57,6 +57,14 @@ class _InformationPageState extends State<InformationPage> {
                     ),
                   ),
                 ),
+                Text(
+                  "Your Credentials",
+                  style: GoogleFonts.inter(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w400,
+                    color: Theme.of(context).colorScheme.tertiary,
+                  ),
+                )
               ],
             ),
           ),
