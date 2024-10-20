@@ -83,9 +83,11 @@ class _InformationPageState extends State<InformationPage> {
                   ),
                 ),
 
-                // Padding around TextFormField
+                // Padding around username TextFormField
                 Padding(
                   padding: const EdgeInsets.only(top: 12.0),
+
+                  // Username TextFormField here
                   child: TextFormField(
                     controller: _usernameController,
                     decoration: InputDecoration(
@@ -99,16 +101,22 @@ class _InformationPageState extends State<InformationPage> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 12.0),
-                TextFormField(
-                  controller: _fullnameController,
-                  decoration: InputDecoration(
-                    labelText: "Full Name",
-                    labelStyle: TextStyle(
-                      color: Theme.of(context).colorScheme.tertiary,
-                    ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8.0),
+
+                // Padding around fullname TextFormField
+                Padding(
+                  padding: const EdgeInsets.only(top: 12.0),
+
+                  // Fullname TextFormField here
+                  child: TextFormField(
+                    controller: _fullnameController,
+                    decoration: InputDecoration(
+                      labelText: "Full Name",
+                      labelStyle: TextStyle(
+                        color: Theme.of(context).colorScheme.tertiary,
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
                     ),
                   ),
                 ),
