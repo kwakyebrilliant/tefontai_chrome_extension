@@ -10,10 +10,15 @@ class InformationPage extends StatefulWidget {
 }
 
 class _InformationPageState extends State<InformationPage> {
+  // Controllers
+  final TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _fullnameController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
+      // Stack starts here
       body: Stack(
         children: [
           Positioned(
@@ -64,7 +69,34 @@ class _InformationPageState extends State<InformationPage> {
                     fontWeight: FontWeight.w400,
                     color: Theme.of(context).colorScheme.tertiary,
                   ),
-                )
+                ),
+                const SizedBox(height: 12.0),
+                // Add the TextFormField here
+                TextFormField(
+                  controller: _usernameController,
+                  decoration: InputDecoration(
+                    labelText: "Username",
+                    labelStyle: TextStyle(
+                      color: Theme.of(context).colorScheme.tertiary,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 12.0),
+                TextFormField(
+                  controller: _fullnameController,
+                  decoration: InputDecoration(
+                    labelText: "Full Name",
+                    labelStyle: TextStyle(
+                      color: Theme.of(context).colorScheme.tertiary,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
