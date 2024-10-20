@@ -123,6 +123,41 @@ class _InformationPageState extends State<InformationPage> {
               ],
             ),
           ),
+
+          // Submit button positioned at the bottom
+          Positioned(
+            bottom: 0.0,
+            left: 10.0,
+            right: 10.0,
+
+            // Submit button in padding
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 16.0, horizontal: 20.0),
+              child: SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: WidgetStateProperty.all(
+                      const Color(0xFFD47CC3),
+                    ),
+                  ),
+                  onPressed: () {},
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8.0),
+                    child: Text(
+                      'Submit',
+                      style: GoogleFonts.roboto(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w800,
+                        color: const Color.fromRGBO(255, 255, 255, 1),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
