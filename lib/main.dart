@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tefontai_chrome_extension/Auth/main_page.dart';
@@ -5,7 +6,10 @@ import 'package:tefontai_chrome_extension/Theme/dark_mode.dart';
 import 'package:tefontai_chrome_extension/Theme/light_mode.dart';
 import 'package:tefontai_chrome_extension/Theme/theme_notifier.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
   runApp(ChangeNotifierProvider(
     create: (context) => ThemeNotifier(),
     child: Builder(builder: (context) {
