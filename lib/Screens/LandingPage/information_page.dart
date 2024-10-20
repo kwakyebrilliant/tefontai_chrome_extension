@@ -21,10 +21,13 @@ class _InformationPageState extends State<InformationPage> {
       // Stack starts here
       body: Stack(
         children: [
+          // First positioned
           Positioned(
             top: 20.0,
             left: 15.0,
             right: 15.0,
+
+            // Column starts here
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
