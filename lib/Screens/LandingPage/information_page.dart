@@ -31,14 +31,21 @@ class _InformationPageState extends State<InformationPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                // Gesturedetector around arrow back icon
                 GestureDetector(
                   onTap: widget.showLandingPage,
+
+                  // Arrow back icon here
                   child: const Icon(
                     Icons.arrow_back,
                   ),
                 ),
+
+                // Padding around richtext
                 Padding(
                   padding: const EdgeInsets.only(top: 10.0),
+
+                  // Richtext here
                   child: RichText(
                     text: TextSpan(
                       style: GoogleFonts.inter(
@@ -65,6 +72,8 @@ class _InformationPageState extends State<InformationPage> {
                     ),
                   ),
                 ),
+
+                // Credential text here
                 Text(
                   "Your Credentials",
                   style: GoogleFonts.inter(
@@ -73,17 +82,20 @@ class _InformationPageState extends State<InformationPage> {
                     color: Theme.of(context).colorScheme.tertiary,
                   ),
                 ),
-                const SizedBox(height: 12.0),
-                // Add the TextFormField here
-                TextFormField(
-                  controller: _usernameController,
-                  decoration: InputDecoration(
-                    labelText: "Username",
-                    labelStyle: TextStyle(
-                      color: Theme.of(context).colorScheme.tertiary,
-                    ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8.0),
+
+                // Padding around TextFormField
+                Padding(
+                  padding: const EdgeInsets.only(top: 12.0),
+                  child: TextFormField(
+                    controller: _usernameController,
+                    decoration: InputDecoration(
+                      labelText: "Username",
+                      labelStyle: TextStyle(
+                        color: Theme.of(context).colorScheme.tertiary,
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
                     ),
                   ),
                 ),
